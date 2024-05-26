@@ -1,0 +1,8 @@
+localhost {
+	encode gzip zstd
+	root caddy-root
+	header Cache-Control max-age=3600
+	header content-location {uri}
+	log
+	file_server
+}
